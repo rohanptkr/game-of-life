@@ -33,6 +33,7 @@ jobs:
 
       - name: Stop EC2 Instance
         run: |
+          aws ec2 describe-instances --instance-ids i-0d306b2857341dcf2 --query 'Reservations[0].Instances[0].State.Name' --output text
           aws ec2 stop-instances --instance-ids i-0d306b2857341dcf2
           aws ec2 wait instance-stopped --instance-ids i-0d306b2857341dcf2
           echo "EC2 instance stopped successfully"
