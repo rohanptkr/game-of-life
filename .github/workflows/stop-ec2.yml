@@ -3,8 +3,8 @@ name: Stop EC2 Instance
 on:
   workflow_dispatch:  # Manual trigger
   # You can also add other triggers like:
-  schedule:
-    - cron: '30 23 * * *'  # Daily at 6 PM UTC
+  #schedule:
+  #  - cron: '30 23 * * *'  # Daily at 6 PM UTC
   # push:
   #   branches: [ main ]
 
